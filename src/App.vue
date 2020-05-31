@@ -12,24 +12,20 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 
 export default {
-  name: 'App'
-}
-
-new Vue({
-  el: '#app',
-  data: {
-    message: 'abdd'
-  },
+  name: 'App',
   methods: {
     sbt: function() {
-      this.axios.get('/api/project/5ed359902945ea2cfa292b98', {
+      this.$http.get("/v1/restserver/ting?type=1&size=30&offset=0&method=baidu.ting.billboard.billList").then(m=>console.log(m));
+      
+      //this.axios.get('/api/project/5ed359902945ea2cfa292b98', {
 
-      }).then(function(response){
-        console.log(response);
-      });
+      //}).then(function(response){
+      //  console.log(response);
+      //});
     }
   }
-})
+}
+
 </script>
 
 <style>

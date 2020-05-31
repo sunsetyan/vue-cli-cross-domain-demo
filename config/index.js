@@ -11,11 +11,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/api/**': {
-        target: 'https://www.easy-mock.com/project/5ed359902945ea2cfa292b98',
+      '/v1': {
+        target: 'http://tingapi.ting.baidu.com',
         changeOrigin: true,
         pathRewrite: {
-          '^/api': '/'
+          '^/v1': '/v1'
         }
       }
     },
