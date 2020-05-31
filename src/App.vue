@@ -16,12 +16,6 @@ export default {
   methods: {
     sbt: function() {
       this.$http.get("/v1/restserver/ting?type=1&size=30&offset=0&method=baidu.ting.billboard.billList").then(m=>console.log(m));
-      
-      //this.axios.get('/api/project/5ed359902945ea2cfa292b98', {
-
-      //}).then(function(response){
-      //  console.log(response);
-      //});
     }
   }
 }
